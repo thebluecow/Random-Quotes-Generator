@@ -10,33 +10,57 @@ var quotes = [
     quote: "COBRA Commander is hatred and evil personified. Corrupt. A man without scruples. Probably the most dangerous man alive!",
     source: "Anonymous",
     citation: "GI Joe file card",
-    year: "1983",
+    year: 1983,
     tags: "toys, gi joe, fun",
-    character: "Cobra Commander",
+    figure: "Cobra Commander",
     viewed: 0
   },
   {
     quote: "Charlie is a Shaman, a medicine man. He's not a healer or a priest or a witch-doctor. There isn't any equivalent in our culture for what he is unless we had shrinks that could actually help people.",
     source: "Anonymous",
     citation: "GI Joe file card",
-    year: "1984",
+    year: 1984,
     tags: "toys, gi joe, spirit",
-    character: "Spirit",
+    figure: "Spirit",
     viewed: 0
   },
   {
     quote: "The harder the world, the fiercer the honour.",
     source: "Steven Erickson",
     citation: "Memories of Ice",
-    year: "2001",
+    year: 2001,
     tags: "malazan, fantasy, novels",
+    viewed: 0
+  },
+  {
+    quote: "I've never seen anything this beautiful in the entire galaxy - alright, give me the bomb.",
+    source: "Transformers",
+    citation: "Transformers cartoon",
+    tags: "cartoon, world, transformers",
+    character: "Ultra Magnus",
+    viewed: 0
+  },
+  {
+    quote: "Your knowledge is only overshadowed by your stupidity!",
+    source: "Transformers",
+    citation: "Transformers cartoon",
+    tags: "cartoon, world, transformers",
+    character: "Megatron",
+    viewed: 0
+  },
+  {
+    quote: "Ariel! Ookla! Ride!",
+    source: "Thundarr the Barbarian",
+    citation: "Thundarr the Barbarian cartoon",
+    tags: "cartoon, world, thundarr, hanna-barbera",
+    character: "Thundarr",
     viewed: 0
   },
   {
     quote: "I've come to understand that the truth isn't really what's important...what really matters is what people agree is the truth.",
     source: "Ian C. Esslemont",
     citation: "Stonewielder",
-    year: "2010",
+    year: 2010,
     tags: "malazan, fantasy, novels",
     character: "Greymane",
     viewed: 0
@@ -45,7 +69,7 @@ var quotes = [
     quote: "Chaos needs no allies, for it dwells like a poison in every one of us.",
     source: "Steven Erickson",
     citation: "Midnight Tides",
-    year: "2004",
+    year: 2004,
     tags: "malazan, fantasy, poison",
     viewed: 0
   },
@@ -53,7 +77,7 @@ var quotes = [
     quote: "What makes a Malazan soldier so dangerous? They’re allowed to think.",
     source: "Steven Erickson",
     citation: "Deadhouse Gates",
-    year: "2000",
+    year: 2000,
     tags: "malazan, fantasy, dangerous",
     viewed: 0
   },
@@ -61,7 +85,7 @@ var quotes = [
     quote: "So we beat on, boats against the current, borne back ceaselessly into the past.",
     source: "F. Scott Fitzgerald",
     citation: "The Great Gatsby",
-    year: "1925",
+    year: 1925,
     tags: "literature, great, nick",
     character: "Nick Carraway",
     viewed: 0
@@ -70,7 +94,7 @@ var quotes = [
     quote: "Every one suspects himself of at least one of the cardinal virtues, and this is mine: I am one of the few honest people that I have ever known.",
     source: "F. Scott Fitzgerald",
     citation: "The Great Gatsby",
-    year: "1925",
+    year: 1925,
     tags: "literature, great, nick",
     character: "Nick Carraway",
     viewed: 0
@@ -79,7 +103,7 @@ var quotes = [
     quote: "A pain stabbed my heart, as it did every time I saw a girl I loved who was going the opposite direction in this too-big world.",
     source: "Jack Kerouac",
     citation: "On the Road",
-    year: "1957",
+    year: 1957,
     tags: "kerouac, beat, literature",
     character: "Sal Paradise",
     viewed: 0
@@ -124,6 +148,33 @@ var quotes = [
     citation: "GI Joe cartoon",
     tags: "gi joe, shipwreck, cartoon",
     character: "Shipwreck",
+    viewed: 0
+  },
+  {
+    quote: "The world is full of abandoned meanings. In the commonplace I find unexpected themes and intensities.",
+    source: "Don DeLillo",
+    citation: "White Noise",
+    year: 1984,
+    tags: "literature, toxic cloud, commercialism",
+    character: "Jack",
+    viewed: 0
+  },
+  {
+    quote: "It's like everyone tells a story about themselves inside their own head. Always. All the time. That story makes you what you are. We build ourselves out of that story.",
+    source: "Patrick Rothfuss",
+    citation: "The Name of the Wind",
+    year: 2007,
+    tags: "fantasy, world, abandoned",
+    character: "Kvothe",
+    viewed: 0
+  },
+  {
+    quote: "Words are pale shadows of forgotten names. As names have power, words have power. Words can light fires in the minds of men. Words can wring tears from the hardest hearts.",
+    source: "Patrick Rothfuss",
+    citation: "The Name of the Wind",
+    year: 2007,
+    tags: "fantasy, words, shadows, power",
+    character: "Kvothe",
     viewed: 0
   }
 ];
@@ -186,7 +237,7 @@ function sortProperties(quote) {
 
   // used to ensure the tags property is always last
   // did this in case new properties were added to the objects in the future
-  // such as boolean for already shown
+  // such as the addition of viewed
   for (var x in properties)properties[x] === "tags" ? properties.push(properties.splice(x,1)[0]) : 0;
 
   return properties;

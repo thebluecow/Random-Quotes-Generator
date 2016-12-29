@@ -77,6 +77,12 @@ body {
   font-style: normal;
 }
 
+.figure:before {
+  content: ", about ";
+  font-style: normal;
+}
+
+
 #loadQuote {
   position: fixed;
   width: 12em;
