@@ -147,7 +147,7 @@ function getRandomColor() {
 }
 
 // retrieves a random record from the quotes array contained in the
-// js/quotes.js file
+// quotes array
 // returns a quote object
 function getRandomQuote() {
   // declare two variables for random number and the quote
